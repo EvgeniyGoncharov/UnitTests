@@ -8,14 +8,14 @@ public class View implements CalculatorView {
      * Отображает результат вычисления
      */
     public void printResult(double result){
-        System.out.println(result);
+        System.out.print(result);
     };
 
     /**
      * Показывает ошибку, например деление на 0, пустые аргументы и прочее
      */
     public void displayError(String message) throws Exception {
-        System.out.println(message);
+        System.out.print(message);
     };
 
     /**
