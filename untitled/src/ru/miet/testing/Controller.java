@@ -7,8 +7,8 @@ public class Controller implements CalculatorPresenter{
     Scanner s = new Scanner(System.in);
     Model model = new Model();
     View view = new View();
-    public double firstArg;
-    public double secondArg;
+    public double firstArg = 0;
+    public double secondArg = 1;
     public double res;
     public char operation;
 
@@ -73,8 +73,6 @@ public class Controller implements CalculatorPresenter{
      * Вызывается формой в тот момент, когда пользователь нажал на кнопку '*'
      */
     public void onMultiplyClicked() throws Exception {
-        if(operation == '*'){
-            view.printResult(model.multiply(firstArg, secondArg));
-        }
+        view.printResult(model.multiply(firstArg, secondArg));
     };
 }

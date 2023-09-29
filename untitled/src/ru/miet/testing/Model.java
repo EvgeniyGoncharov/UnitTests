@@ -28,7 +28,7 @@ public class Model {
      * Должен выбросить {@link java.lang.ArithmeticException} если |b| < 10e-8
      */
     double divide(double a, double b) throws Exception {
-        if(Math.abs(b) < 5){
+        if(Math.abs(b) < 0.00000001){
             throw new java.lang.ArithmeticException();
         }
         return a/b;
