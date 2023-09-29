@@ -1,8 +1,8 @@
 package ru.miet.testing;
 
 public class View implements CalculatorView {
-    public double firstArg;
-    public double secondArg;
+    public double firstArg = 0;
+    public double secondArg = 0;
     public char operation;
     /**
      * Отображает результат вычисления
@@ -14,7 +14,7 @@ public class View implements CalculatorView {
     /**
      * Показывает ошибку, например деление на 0, пустые аргументы и прочее
      */
-    public void displayError(String message) throws Exception {
+    public void displayError(String message){
         System.out.print(message);
     };
 
