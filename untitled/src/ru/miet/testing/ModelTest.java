@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ModelTest {
 
-    Model model;
+    Model model = new Model();
     @org.junit.jupiter.api.Test
     void sum() {
         double a = 1;
