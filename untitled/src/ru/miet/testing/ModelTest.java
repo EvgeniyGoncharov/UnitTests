@@ -28,4 +28,17 @@ class ModelTest {
         double a = 1;
         assertEquals(a / a, model.divide(a,a));
     }
+    @org.junit.jupiter.api.Test
+    void divideEx() throws Exception
+    {
+        double a = 1;
+        double b = 0;
+        try{
+            model.divide(a,b);
+        }
+        catch (Exception e){
+            ArithmeticException ae = new ArithmeticException();
+            assertEquals(ae.toString(), e.toString());
+        }
+    }
 }
