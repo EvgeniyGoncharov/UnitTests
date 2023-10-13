@@ -50,7 +50,6 @@ public class View implements CalculatorView {
     public void DisplayError(){
         er = new Error("ОШИБКА! ДЕЛЕНИЕ НА НОЛЬ!");
         er.setVisible(true);
-        er.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         er.setSize(500,200);
     }
 
