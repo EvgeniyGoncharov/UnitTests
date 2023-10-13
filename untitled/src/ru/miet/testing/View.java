@@ -1,9 +1,24 @@
 package ru.miet.testing;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class View implements CalculatorView {
     public double firstArg = 0;
     public double secondArg = 0;
     public char operation;
+    public Error er;
+    public static class Error extends JFrame {
+        JLabel l;
+        public Error(String s){
+            super(s);
+            setLayout(new FlowLayout());
+            l = new JLabel("ОШИБКА!\n Делить на ноль нельзя, измените второе число");
+            add(l);
+        }
+    }
     /**
      * Отображает результат вычисления
      */
@@ -31,4 +46,12 @@ public class View implements CalculatorView {
     public String getSecondArgumentAsString(){
         return Double.toString(secondArg);
     };
+
+    public void DisplayError(){
+        er = new Error("ОШИБКА! ДЕЛЕНИЕ НА НОЛЬ!");
+        er.setVisible(true);
+        er.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        er.setSize(500,200);
+    }
+
 }
